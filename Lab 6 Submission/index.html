@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Khai Truong - Aspiring I.T Professional</title> 
+        <link rel=stylesheet href="style.css">
+        <link rel=stylesheet href="w3.css">
+        <link rel="shortcut icon" href="./sampleimages/favicon-32x32.png">
+    </head>
+
+    <header>
+        <div class="w3-container w3-blue-grey">
+        <h1>Khai Truong</h1>
+        </div>
+    </header>
+<!-- JavaScript Code -->
+<script>
+    function validateInput(){
+        var x = document.forms["DonationForm"]["amount"].value;
+        if (!x > 0) {
+            alert("Donation amount must be greater that $0.00");
+            return false;
+        }
+
+        var y = document.forms["DonationForm"]["email"].value;
+        if (!y.includes("@")){
+            alert("The email you have entered is invald.");
+            return false;
+        }
+
+        var z = document.forms["DonationForm"]["creditcard"].value;
+        if (z.length != 16){
+            alert("Credit Card Number must be 16 digits");
+        }
+
+        var a = document.forms["DonationForm"]["securitynumber"].value;
+        if (a.length != 3){
+            alert("Please enter the security code.");
+            return false;
+        }
+
+        var b = document.forms["DonationForm"]["telephone"].value;
+        if (b.length != 10){
+            alert("Please enter your Phone Number without dashes.");
+            return false;
+        }
+
+        var c = document.forms["DonationForm"]["expiration"].value;
+        if (!c.includes("/") && (c.length != 4)){
+            alert("Please enter your Card Expiration Date.");
+            return false;
+        }
+
+        if (!document.forms["DonationForm"]["Agree"].checked){
+            alert("You must agree to the terms and conditions before proceeding.");
+            return false;
+        }
+        alert("Your form was successfully processed.")
+        return true;
+    }
+</script>
+<!-- Navigation Bar and Search Bar -->
+    <body>
+        <nav class="w3-bar w3-light-grey">
+                <div class="nav">
+                <a href="index.html" class="w3-bar-item w3-button">Home</a>
+                </div>
+
+                <div class="nav">
+                <a href="resume.html" class="w3-bar-item w3-button">Resume</a>
+                </div>
+
+                <div class="nav">
+                <a href="Interests.html" class="w3-bar-item w3-button">Interests</a>
+                </div>
+
+                <div class="nav">
+                <a href="Donate.html" class="w3-bar-item w3-button">Donate</a>
+                </div>
+
+                <div class="topnav">
+                    <input type="text" placeholder="Look Up...">
+                </div>
+        </nav>
+
+
+<!-- Main Content -->
+        <div>
+            <main class="w3-container w3-white">
+                <br>
+                <br>
+                <img class="Img1" src="./sampleimages/k1.jpg" alt="portfolio_shot"> 
+                <img class="Img2" src="./sampleimages/k2.jpg" alt="hamster"> 
+                <h2>Who Am I?</h2>
+                <p>My name is Khai Truong and I am a 22 year old Vietnamese American with an interest and love for all things automation. I am the oldest child of three, born and raised in Georgia. I enjoy hiking, weight lifting, playing games,
+                    playing with my hamster, and eating. In my free time I love to spend time with loved ones and build bonds. I adore anything hamster related and geek out at pokemon card collections. I've found that I learn easier when teaching others.
+                     I enjoy seeing the prospects of seeing others on my team succeed and doing well. I have had experience working on teams at my prior school and learned that every team relies on communication. At my forefront, I aim to be as responsive 
+                    as possible and take into account the needs of others. While I am still learning to incorporate more de-stressing techniques to balance my work and personal life, I know I am solid in areas like: Teamwork, Communication, and Following Guidelines.
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <img class="Img3" src="./sampleimages/k5.jpg" alt="gym"> 
+                <img class="Img4" src="./sampleimages/k6.jpg" alt="microsoft"> 
+
+                <h2 class="sec2">What are my asperations?</h2>
+                <p>Prior to becoming an MGA Knight in Macon, Georgia, I was a DigiPen Dragon at Redmond, Washington. I was learning how computer science worked in conjunction with game design. During my year there, I learned how my work could introduce people to positive experiences and change their 
+                    mindset on ideas. The same idea was cemented in my mind when I took my freshman classes at MGA. Technology is a tool that can carry negative associations, however there are many ways to develop products and ideas that can help individuals 
+                    in their daily lives. After living in the same town that housed Microsoft Headquarters, I noticed how the state of Washington housed many large and life changing companies such as Facebook or Amazon. I plan to dedicate my time at MGA to prepare myself and 
+                    make sure I use it as a resource to join innovative startups or help push forward the organizations making a difference in people's lives. I want to become a Software Engineer who has a part in developing products that can extend a hand and 
+                    bring back to every community, not just my own. I plan to graduate from MGA with a level head and body, ready to work.
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <img class="Img5" src="./sampleimages/k3.jpg" alt="hiking"> 
+                <img class="Img6" src="./sampleimages/k4.jpg" alt="seattle"> 
+                <h2>What are you working on right now?</h2>
+                <p>Currently I am using the lessons I have learned from Web Development to make mock websites for friends based on their criteria. While the webpages will not be used professionally, the experience gained from practicing is worthwhile.
+                    I am also working on a series of web pages to promote a product for my final exam. I believe the practice and work from my own projects and class will help in the long run. I am aiming to learn more about Python, HTML, and CSS through
+                    Youtube and other online resources to prepare myself for more advanced classes and eventually the work force.
+                </p>
+            </main>
+        </div>
+
+<!-- Footer and Contact -->
+        <footer class="w3-container w3-blue-grey">
+            <h5>Find Me Here</h5>
+            <div class="menu">
+            <a href="Facebook.Placeholder" class="w3-bar-item w3-button">Facebook</a>
+            </div>
+
+            <div class="menu">
+            <a href="LinkedIn.Placeholder" class="w3-bar-item w3-button">LinkedIn</a>
+            </div>
+            
+            <div class="menu">
+            <a href="Gibhub.PlaceHolder" class="w3-bar-item w3-button">GitHub</a>
+            </div>
+
+            <div class="menu">
+            <a href="Email.PlaceHolder" class="w3-bar-item w3-button">MGA-Email</a>
+            </div>
+        </footer>
+    </body>
+</html>

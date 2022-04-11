@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Khai Truong - Aspiring I.T Professional</title> 
+        <link rel=stylesheet href="style.css">
+        <link rel=stylesheet href="w3.css">
+        <link rel="shortcut icon" href="./sampleimages/favicon-32x32.png">
+    </head>
+
+    <header>
+        <div class="w3-container w3-blue-grey">
+        <h1>Khai Truong</h1>
+        </div>
+    </header>
+<!-- JavaScript Code -->
+    <script>
+        function validateInput(){
+            var x = document.forms["DonationForm"]["amount"].value;
+            if (!x > 0) {
+                alert("Donation amount must be greater that $0.00");
+                return false;
+            }
+
+            var y = document.forms["DonationForm"]["email"].value;
+            if (!y.includes("@")){
+                alert("The email you have entered is invald.");
+                return false;
+            }
+
+            var z = document.forms["DonationForm"]["creditcard"].value;
+            if (z.length != 16){
+                alert("Credit Card Number must be 16 digits");
+            }
+
+            var a = document.forms["DonationForm"]["securitynumber"].value;
+            if (a.length != 3){
+                alert("Please enter the security code.");
+                return false;
+            }
+
+            var b = document.forms["DonationForm"]["telephone"].value;
+            if (b.length != 10){
+                alert("Please enter your Phone Number without dashes.");
+                return false;
+            }
+
+            var c = document.forms["DonationForm"]["expiration"].value;
+            if (!c.includes("/") && (c.length != 4)){
+                alert("Please enter your Card Expiration Date.");
+                return false;
+            }
+
+            if (!document.forms["DonationForm"]["Agree"].checked){
+                alert("You must agree to the terms and conditions before proceeding.");
+                return false;
+            }
+            alert("Your form was successfully processed.")
+            return true;
+        }
+    </script>
+<!-- Navigation Bar and Search Bar -->
+    <body>
+        <nav class="w3-bar w3-light-grey">
+                <div class="nav">
+                <a href="index.html" class="w3-bar-item w3-button">Home</a>
+                </div>
+
+                <div class="nav">
+                <a href="resume.html" class="w3-bar-item w3-button">Resume</a>
+                </div>
+
+                <div class="nav">
+                <a href="Interests.html" class="w3-bar-item w3-button">Interests</a>
+                </div>
+
+                <div class="nav">
+                <a href="Donate.html" class="w3-bar-item w3-button">Donate</a>
+                </div>
+
+                <div class="topnav">
+                    <input type="text" placeholder="Look Up...">
+                </div>
+        </nav>
+
+
+<!-- Main Content -->
+        <div>
+            <main class="w3-container w3-white">
+                <br>
+                <br>
+                <h2>Spread the Love to these Causes:</h2>
+                <br>
+                <img class="Img7" src="./sampleimages/JordanThomasLogo.svg" alt="JThomasLogo"> 
+                <br>
+                <img class="Img8" src="./sampleimages/prosthetics1.jpg" alt="Prosthetic1">
+                <img class="Img9" src="./sampleimages/prosthetics2.jpg" alt="Prosthetics2">
+                <p> The Jordan Thomas Foundation was created to help families with children who require prosthetics. Every child deserves the opporitunity to run, play and express themselves just like any other child, 
+                    however not every child is blessed with financially stability. The Foundation helps children under 18 with obtaining and maintining the prosthetics they need to live a normal life. Over the course of 18 years,
+                    things like resizing, maintainance, and insurance would have cost a family over $150,000 for 1 limb. These high costs are preventing disabled children from enjoying the activies other kids might
+                    take for granted. As someone who broke his ankle and was helpless for 3 months, I undstand the joy and elation of being able to do something as basic as walking. My experiences have given me insight 
+                    on how valuable a limb is. Help a kid regain confidence in themself and in their life by supporting the Jordan Thomas Foundation.</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <hr>
+                <img class="Img10" src="./sampleimages/MGALogo.png" alt="MGA Logo">
+                <img class="Img11" src="sampleimages/MGACampus1.jpg" alt="MGACampus1">
+                <img class="Img12" src="./sampleimages/MGACampus2.jpg" alt="MGACampus2">
+                <p>Middle Georgia State University expands and builds upon itself thanks to the contributions from alumni, friends, and partnerships. The school itself allocates funds towards scholarships for enrolling students and
+                    puts funds towards expansion of its beautiful campus'. As a student myself, I am most grateful to scholarships in the Technology Department who see value in my hardwork and I want nothing more than to give back
+                    to support staff and fellow students. The school and foundation bring up top of the line students to enter the workforce, you can help brilliant students and future leaders in industry with anything you have to donate.
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <hr>
+            </main>
+        </div>
+
+<!-- Web Form -->        
+        <div>
+            <form id="DonationForm"> 
+                <table>
+                    <img class="Img13" src="./sampleimages/prosthetics4.jpg" alt="Prosthetics3">
+                    <img class="Img14" src="./sampleimages/MGACampus3.jpg" alt="MGACampus3">
+                    <H3>Become a Supporter!</H3>
+                    <td>
+                        <label for="foundation">Charity:</label>
+                        Jordan Thomas Foundation<input type="radio" name="choice" tabindex="0">
+                    </td>
+                    <td>MGA Foundation<input type="radio" name="choice"></td>
+                    <tr>
+                        <td><label for="title">Title:</label>
+                            Mr.<input type="radio" name="title" tabindex="1">
+                            Mrs.<input type="radio" name="title">
+                            Ms.<input type="radio" name="title">
+                            Dr.<input type="radio" name="title">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="fname">First Name:</label><input type="text" name="fname" tabindex="2" size="20" maxlength="20"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name:<label><input type="text" name="lname" tabindex="3" size="20" maxlength="20"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label><input type="text" name="email" tabindex="4" size="25"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date">Date:</label><input type="date" name="date" tabindex="5" size="25"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phonetype">Phone type</label>
+                            <select id="phonetype">
+                                <option value="C">Cell</option>
+                                <option value="H">Home</option>
+                                <option value="W">Work</option>
+                                <option value="O">Other</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="telephone">Phone Number:</label><input type="tel" name="telephone" tabindex="7" size="25"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="amount">Donation Amount:</label><input type="number" name="amount"  tabindex="8" size="25"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="creditcard">Credit Card Number:</label><input type="text" name="creditcard" tabindex="9" size="19"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="securitynumber">Security Code:</label><input type="text" name="securitynumber" tabindex="10" size="4"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="expiration">Expiration Date:</label><input type="text" name="expiration" tabindex="11"  size="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Agree to Terms: Yes <input type="radio" class="checkbox" name="Agree" tabindex="12"></td>
+                        <td>No <input type="radio" class="checkbox" name="NotAgree" tabindex="13"></td>
+                    </tr>
+                    <td>
+                    <input type="button" name="SubmitButton" value="Submit Form" onclick="return validateInput()">
+                    </td>
+
+                </table>
+            </form>
+        </div>
+
+<!-- Footer and Contact -->
+        <footer class="w3-container w3-blue-grey">
+            <h5>Find Me Here</h5>
+            <div class="menu">
+            <a href="Facebook.Placeholder" class="w3-bar-item w3-button">Facebook</a>
+            </div>
+
+            <div class="menu">
+            <a href="LinkedIn.Placeholder" class="w3-bar-item w3-button">LinkedIn</a>
+            </div>
+            
+            <div class="menu">
+            <a href="Gibhub.PlaceHolder" class="w3-bar-item w3-button">GitHub</a>
+            </div>
+
+            <div class="menu">
+            <a href="Email.PlaceHolder" class="w3-bar-item w3-button">MGA-Email</a>
+            </div>
+        </footer>
+    </body>
+</html>
